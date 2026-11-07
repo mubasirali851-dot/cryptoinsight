@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CryptoInsight — Crypto Market Intelligence</title>
+<style>
+:root{--bg:#061225;--panel:#091a31;--panel2:#0c203b;--line:#183454;--text:#f2f6ff;--muted:#91a9ca;--blue:#2878ff;--green:#00e5a0;--red:#ff5c7a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 65% -20%,#123364 0,transparent 45%),var(--bg);color:var(--text);font:14px Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:220px 1fr}.sidebar{border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:28px;background:#061326c9}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;padding:0 10px}.logo{width:30px;height:30px;border-radius:50%;background:conic-gradient(from 35deg,#2d8cff 0 75%,#173d80 75%);position:relative}.logo:after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--bg)}.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;color:#b7c9e5;text-align:left;padding:12px 13px;border-radius:9px;display:flex;gap:12px;align-items:center}.nav button:hover,.nav button.active{background:#15315a;color:#4a94ff}.nav .ico{font-size:17px;width:18px;text-align:center}.sidebar-card{margin-top:auto;padding:16px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#0c2341,#07162b);line-height:1.55}.sidebar-card strong{display:block;font-size:16px;margin:8px 0}.primary{border:0;border-radius:8px;background:var(--blue);color:white;padding:10px 15px;font-weight:650}.primary:hover{filter:brightness(1.12)}main{min-width:0}.topbar{height:66px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:0 26px}.search{flex:1;max-width:740px;position:relative}.search input{width:100%;background:#102644;border:1px solid #1b365a;border-radius:9px;padding:12px 15px 12px 42px;color:white;outline:none}.search input:focus{border-color:#428aff}.search span{position:absolute;left:14px;top:10px;font-size:18px;color:#9db5d9}.top-actions{margin-left:auto;display:flex;gap:10px;align-items:center}.icon-btn{border:1px solid var(--line);border-radius:9px;background:#0c2039;color:#d9e7ff;padding:9px 12px}.content{padding:24px 26px 34px;max-width:1800px;margin:auto}.heading{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:20px}.eyebrow{color:#6ea8ff;text-transform:uppercase;letter-spacing:1.7px;font-size:10px;font-weight:800}.heading h1{font-size:30px;letter-spacing:-.7px;margin:5px 0}.heading p{margin:0;color:var(--muted)}.live{color:var(--green);font-size:12px;display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:16px}.card{border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#0a1b32ed,#07162aeb);min-width:0}.metric{padding:17px}.metric-head{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}.metric-icon{font-size:18px;color:#438dff}.metric-value{font-size:25px;font-weight:750;letter-spacing:-.6px;margin:12px 0 5px}.positive{color:var(--green)}.negative{color:var(--red)}.small{font-size:12px}.layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,.95fr);gap:16px}.chart-card{padding:18px 18px 12px}.coin-head{display:flex;align-items:center;gap:11px}.coin-icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#ff9b19;color:white;font-size:23px;font-weight:800}.coin-title{font-size:15px;font-weight:750}.ticker{font-size:12px;color:var(--muted);margin-top:3px}.chart-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.price{font-size:24px;font-weight:800;margin-top:12px}.range{display:flex;gap:3px;padding:4px;background:#102442;border-radius:9px}.range button{border:0;background:transparent;color:#9db4d4;padding:7px 10px;border-radius:6px;font-size:11px}.range button.active{background:var(--blue);color:white}.chart-wrap{height:245px;margin-top:15px;position:relative}.chart-wrap canvas{width:100%;height:100%;display:block}.chart-foot{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-top:8px}.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.section-head h2{font-size:15px;margin:0}.text-button{background:none;border:0;color:#5a9cff;font-size:12px}.table-card{padding:18px}.coin-table{width:100%;border-collapse:collapse}.coin-table th{text-align:right;color:var(--muted);font-size:11px;font-weight:500;padding:10px 4px}.coin-table th:nth-child(2),.coin-table td:nth-child(2){text-align:left}.coin-table td{text-align:right;padding:13px 4px;border-top:1px solid #142d4a;font-size:12px;white-space:nowrap}.coin-cell{display:flex;align-items:center;gap:8px;text-align:left}.mini-coin{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;background:#243f77}.coin-name{font-weight:650}.coin-ticker{font-size:10px;color:var(--muted);margin-top:3px}.below{display:grid;grid-template-columns:1fr 1.35fr 1.25fr;gap:16px;margin-top:16px}.sentiment,.technical,.news{padding:18px}.gauge{width:175px;height:95px;margin:10px auto 0;position:relative;overflow:hidden}.gauge-arc{position:absolute;inset:0;border-radius:100px 100px 0 0;background:conic-gradient(from 270deg at 50% 100%,#00d9a0 0deg,#b5e62d 65deg,#ffca3d 125deg,#ff4e6d 180deg,transparent 180deg);}.gauge-arc:after{content:"";position:absolute;inset:12px 12px 0;border-radius:100px 100px 0 0;background:var(--panel)}.gauge-center{position:absolute;z-index:2;inset:45px 0 0;text-align:center}.gauge-center strong{display:block;font-size:23px;color:var(--green)}.gauge-center span{color:var(--muted);font-size:11px}.sentiment-note{text-align:center;color:var(--muted);font-size:11px;margin:8px 0 17px}.sentiment-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.mini-stat{border:1px solid var(--line);border-radius:8px;padding:9px 7px;min-width:0}.mini-stat span{font-size:10px;color:var(--muted);display:block;line-height:1.4}.mini-stat strong{display:block;font-size:15px;margin-top:7px}.tabs{display:flex;gap:3px;flex-wrap:wrap;margin-bottom:8px}.tabs button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:7px 9px;border-radius:7px;font-size:11px}.tabs button.active{background:#153b71;color:#70aaff}.technical-chart{height:145px}.technical-chart canvas{width:100%;height:100%}.indicator-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:10px 0;font-size:12px}.indicator-row span{color:var(--muted)}.badge{font-size:10px;border-radius:20px;padding:5px 8px;background:#064b3e;color:var(--green)}.badge.neutral{background:#25334a;color:#b5c9e4}.news-item{display:flex;gap:11px;padding:11px 0;border-top:1px solid var(--line)}.news-thumb{width:60px;height:50px;flex-shrink:0;border-radius:8px;background:linear-gradient(135deg,#244c79,#14213c);display:grid;place-items:center;font-size:24px}.news-title{font-weight:650;font-size:12px;line-height:1.45}.news-meta{font-size:10px;color:var(--muted);margin-top:6px}.prediction{margin-top:16px;padding:18px;display:grid;grid-template-columns:1.05fr 1.35fr .9fr .9fr auto;gap:18px;align-items:center}.prediction h2{font-size:14px;margin:0 0 12px}.prediction p{font-size:11px;color:var(--muted);line-height:1.65;margin:0}.prediction .divider{border-left:1px solid var(--line);padding-left:18px}.bull{color:var(--green);font-weight:750;font-size:15px;margin:6px 0}.target{font-size:11px;color:var(--muted)}.footer{text-align:center;color:#617b9f;font-size:11px;padding:22px 10px 0}.toast{position:fixed;bottom:22px;right:22px;background:#12345b;border:1px solid #2e609b;color:white;padding:12px 16px;border-radius:9px;box-shadow:0 12px 35px #0006;display:none;z-index:10}.empty{padding:22px;color:var(--muted);text-align:center}
+@media(max-width:1150px){.app{grid-template-columns:190px 1fr}.below{grid-template-columns:1fr 1fr}.news{grid-column:1/-1}.prediction{grid-template-columns:1fr 1fr 1fr}.prediction .divider{padding-left:12px}.prediction .primary{grid-column:1/-1}.metrics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.app{display:block}.sidebar{position:sticky;top:0;z-index:5;padding:12px;border-right:0;border-bottom:1px solid var(--line);display:block}.brand{font-size:18px}.sidebar-card{display:none}.nav{display:flex;overflow:auto;gap:4px;margin-top:12px}.nav button{white-space:nowrap;padding:9px}.nav .ico{display:none}.topbar{padding:0 14px;height:58px}.top-actions .icon-btn:first-child{display:none}.content{padding:19px 13px}.heading h1{font-size:25px}.heading{align-items:start;flex-direction:column}.metrics{gap:9px}.metric{padding:13px}.metric-value{font-size:21px}.layout,.below{grid-template-columns:1fr}.news{grid-column:auto}.chart-wrap{height:220px}.prediction{grid-template-columns:1fr 1fr;gap:15px}.prediction .divider{border:0;padding-left:0}.prediction .primary{grid-column:1/-1}.table-card{overflow-x:auto}.coin-table{min-width:350px}.live{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><span class="logo"></span>CryptoInsight</div>
+  <nav class="nav" aria-label="Main navigation">
+    <button class="active" data-section="Dashboard"><span class="ico">⌂</span>Dashboard</button>
+    <button data-section="Market Overview"><span class="ico">▥</span>Market Overview</button>
+    <button data-section="Coins"><span class="ico">◉</span>Coins</button>
+    <button data-section="Watchlist"><span class="ico">☆</span>Watchlist</button>
+    <button data-section="Technical Analysis"><span class="ico">⌁</span>Technical Analysis</button>
+    <button data-section="News & Insights"><span class="ico">▤</span>News & Insights</button>
+    <button data-section="Portfolio Tracker"><span class="ico">▣</span>Portfolio Tracker</button>
+    <button data-section="Settings"><span class="ico">⚙</span>Settings</button>
+  </nav>
+  <div class="sidebar-card"><span style="color:#438dff;font-size:25px">↗</span><strong>Make smarter trading decisions</strong><span style="color:var(--muted);font-size:12px">Explore market data and discover trends.</span><br><button class="primary" style="margin-top:14px" onclick="toast('Welcome to CryptoInsight!')">Get Started</button></div>
+</aside>
+<main>
+<header class="topbar">
+  <div class="search"><span>⌕</span><input id="search" type="search" placeholder="Search coins, symbols, or keywords..." aria-label="Search coins"></div>
+  <div class="top-actions"><button class="icon-btn" title="Notifications" onclick="toast('You’re all caught up.')">♧</button><button class="icon-btn" id="theme" title="Toggle appearance">☼</button><button class="primary" onclick="toast('Sign-in can be connected when you add authentication.')">Sign In</button></div>
+</header>
+<div class="content">
+  <section class="heading"><div><div class="eyebrow">Market intelligence platform</div><h1 id="page-title">Crypto Market <span style="color:#347fff">Analysis</span></h1><p>Real-time data, technical analysis, and market insights to help you trade smarter.</p></div><div class="live"><span class="dot"></span> DEMO MARKET DATA <span id="clock" style="color:var(--muted);margin-left:8px"></span></div></section>
+  <section class="metrics">
+    <div class="card metric"><div class="metric-head">Total Market Cap <span class="metric-icon">◎</span></div><div class="metric-value">$2.42T</div><div class="positive small">▲ 2.31% (24h)</div></div>
+    <div class="card metric"><div class="metric-head">Total Volume (24h) <span class="metric-icon">▤</span></div><div class="metric-value">$98.7B</div><div class="positive small">▲ 18.42% (24h)</div></div>
+    <div class="card metric"><div class="metric-head">BTC Dominance <span class="metric-icon">₿</span></div><div class="metric-value">52.4%</div><div class="positive small">▲ 0.36% (24h)</div></div>
+    <div class="card metric"><div class="metric-head">Active Cryptocurrencies <span class="metric-icon">♟</span></div><div class="metric-value">10,842</div><div class="positive small">▲ 1.27% (24h)</div></div>
+  </section>
+  <section class="layout">
+    <div class="card chart-card">
+      <div class="chart-top"><div style="display:flex;align-items:center;gap:11px"><div class="coin-icon" id="main-icon">₿</div><div><div class="coin-title" id="main-name">Bitcoin <span style="font-weight:400;color:var(--muted)">(BTC)</span></div><div class="ticker" id="main-ticker">BTC / USD</div></div></div><div><div class="price" id="main-price">$67,320.45</div><div class="positive small" id="main-change">▲ 2.85% (24h)</div></div><div class="range" id="ranges"><button class="active" data-range="1D">1D</button><button data-range="7D">7D</button><button data-range="1M">1M</button><button data-range="3M">3M</button><button data-range="1Y">1Y</button><button data-range="ALL">ALL</button></div></div>
+      <div class="chart-wrap"><canvas id="price-chart" aria-label="Illustrative cryptocurrency price chart"></canvas></div><div class="chart-foot"><span id="chart-start">12:00 AM</span><span>Price movement · USD</span><span id="chart-end">11:59 PM</span></div>
+    </div>
+    <div class="card table-card"><div class="section-head"><h2>Top Cryptocurrencies</h2><button class="text-button" onclick="showSection('Coins')">View all →</button></div>
+      <table class="coin-table"><thead><tr><th>#</th><th>Coin</th><th>Price</th><th>24h %</th><th>Market Cap</th></tr></thead><tbody id="coin-rows"></tbody></table>
+    </div>
+  </section>
+  <section class="below">
+    <div class="card sentiment"><div class="section-head"><h2>Market Sentiment</h2><span class="badge">Live demo</span></div><div class="gauge"><div class="gauge-arc"></div><div class="gauge-center"><strong>72 <span style="font-size:13px;color:var(--muted)">/100</span></strong><span>Greed</span></div></div><div class="sentiment-note">Market sentiment is leaning bullish.</div><div class="sentiment-stats"><div class="mini-stat"><span>Fear & Greed Index</span><strong>72</strong><span class="positive">Greed</span></div><div class="mini-stat"><span>BTC Exchange Inflow</span><strong class="positive">+12.5%</strong><span>24h change</span></div><div class="mini-stat"><span>Liquidations (24h)</span><strong>$148.3M</strong><span class="positive">Updated</span></div></div></div>
+    <div class="card technical"><div class="section-head"><h2>Technical Analysis <span style="color:var(--muted);font-weight:400">(BTC)</span></h2></div><div class="tabs" id="indicators"><button class="active" data-ind="RSI">RSI</button><button data-ind="MACD">MACD</button><button data-ind="Moving Averages">Moving Averages</button><button data-ind="Bollinger Bands">Bollinger Bands</button></div><div class="technical-chart"><canvas id="tech-chart"></canvas></div><div class="indicator-row"><span id="ind-label">RSI (14)</span><strong id="ind-value">62.4</strong><span class="badge neutral" id="ind-status">Neutral</span></div><div class="indicator-row"><span>MACD</span><strong>1,284.6</strong><span class="badge">Bullish</span></div><div class="indicator-row"><span>SMA (50)</span><strong>$64,892</strong><span class="badge">Bullish</span></div></div>
+    <div class="card news"><div class="section-head"><h2>Latest News & Insights</h2><button class="text-button" onclick="showSection('News & Insights')">View all →</button></div>
+      <div class="news-item"><div class="news-thumb">₿</div><div><div class="news-title">Bitcoin Holds $67K as Institutional Interest Grows</div><div class="news-meta">2 hours ago · Market Brief</div></div></div>
+      <div class="news-item"><div class="news-thumb">◆</div><div><div class="news-title">Ethereum Ecosystem Sees Renewed Momentum</div><div class="news-meta">4 hours ago · Network Update</div></div></div>
+      <div class="news-item"><div class="news-thumb">📈</div><div><div class="news-title">Altcoin Trends Traders Are Watching This Week</div><div class="news-meta">6 hours ago · Market Brief</div></div></div>
+      <div class="news-item"><div class="news-thumb">🌐</div><div><div class="news-title">Global Crypto Regulation: Key Developments</div><div class="news-meta">8 hours ago · Policy Watch</div></div></div>
+    </div>
+  </section>
+  <section class="card prediction"><div><h2>Price Analysis & Predictions</h2><div class="coin-head"><div class="coin-icon" style="width:34px;height:34px;font-size:20px">₿</div><div><strong>Bitcoin (BTC)</strong><div class="price" style="font-size:17px;margin-top:4px">$67,320.45</div></div></div></div><div class="divider"><p>BTC is showing positive momentum in this illustrative dashboard. Watch key support and resistance levels and validate signals against current market data.</p></div><div class="divider"><span class="small" style="color:var(--muted)">Short Term (1–7 days)</span><div class="bull">Bullish*</div><div class="target">Illustrative target: $70K–$72K</div></div><div class="divider"><span class="small" style="color:var(--muted)">Long Term (1–6 months)</span><div class="bull">Bullish*</div><div class="target">Illustrative target: $85K–$100K</div></div><button class="primary" onclick="toast('Detailed analysis is a demo feature; connect live market data to enable it.')">View Full Analysis →</button></section>
+  <div class="footer">CryptoInsight · Market figures shown are illustrative demo data, not live prices or financial advice.</div>
+</div>
+</main>
+</div><div class="toast" id="toast"></div>
+<script>
+const coins=[
+{name:'Bitcoin',symbol:'BTC',price:67320.45,change:2.85,cap:'$1.32T',icon:'₿',color:'#ff9b19'},
+{name:'Ethereum',symbol:'ETH',price:3249.17,change:1.92,cap:'$390.6B',icon:'◆',color:'#627cff'},
+{name:'Tether',symbol:'USDT',price:1,change:0.02,cap:'$110.4B',icon:'₮',color:'#00b995'},
+{name:'BNB',symbol:'BNB',price:582.41,change:1.47,cap:'$85.1B',icon:'✿',color:'#f5b900'},
+{name:'Solana',symbol:'SOL',price:152.76,change:3.21,cap:'$70.3B',icon:'≋',color:'#9b76ff'},
+{name:'XRP',symbol:'XRP',price:0.62,change:-0.84,cap:'$34.1B',icon:'✕',color:'#7589a8'},
+{name:'Dogecoin',symbol:'DOGE',price:0.16,change:4.1,cap:'$22.8B',icon:'Ð',color:'#c6a84b'}];
+let selected=coins[0],currentRange='1D',indicator='RSI',watchlist=new Set(['BTC','ETH']),toastTimer;
+function money(v){return v<1?'$'+v.toFixed(4):'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function renderCoins(filter=''){const rows=document.getElementById('coin-rows');let arr=coins.filter(c=>(c.name+' '+c.symbol).toLowerCase().includes(filter.toLowerCase()));if(document.querySelector('.nav button.active')?.dataset.section==='Watchlist')arr=arr.filter(c=>watchlist.has(c.symbol));rows.innerHTML=arr.slice(0,5).map((c,i)=>`<tr data-symbol="${c.symbol}" style="cursor:pointer"><td>${i+1}</td><td><div class="coin-cell"><span class="mini-coin" style="background:${c.color};color:white">${c.icon}</span><div><div class="coin-name">${c.name}</div><div class="coin-ticker">${c.symbol}</div></div></div></td><td>${money(c.price)}</td><td class="${c.change>=0?'positive':'negative'}">${c.change>=0?'▲':'▼'} ${Math.abs(c.change).toFixed(2)}%</td><td>${c.cap}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">No matching coins found.</td></tr>';rows.querySelectorAll('tr[data-symbol]').forEach(row=>row.addEventListener('click',()=>selectCoin(coins.find(c=>c.symbol===row.dataset.symbol))))}
+function selectCoin(c){selected=c;document.getElementById('main-icon').textContent=c.icon;document.getElementById('main-icon').style.background=c.color;document.getElementById('main-name').innerHTML=`${c.name} <span style="font-weight:400;color:var(--muted)">(${c.symbol})</span>`;document.getElementById('main-ticker').textContent=c.symbol+' / USD';document.getElementById('main-price').textContent=money(c.price);document.getElementById('main-change').textContent=(c.change>=0?'▲ ':'▼ ')+Math.abs(c.change).toFixed(2)+'% (24h)';document.getElementById('main-change').className=(c.change>=0?'positive':'negative')+' small';drawPrice();toast('Showing '+c.name+' market chart (demo data).')}
+function toast(msg){let el=document.getElementById('toast');el.textContent=msg;el.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.style.display='none',2600)}
+function showSection(s){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.section===s));document.getElementById('page-title').innerHTML=s==='Dashboard'?'Crypto Market <span style="color:#347fff">Analysis</span>':s;renderCoins(document.getElementById('search').value);if(s==='Watchlist')toast('Watchlist: click a coin to open its chart.');else if(s!=='Dashboard')toast(s+' view selected — dashboard modules remain available.');if(s==='Technical Analysis')document.querySelector('.technical').scrollIntoView({behavior:'smooth',block:'center'});if(s==='News & Insights')document.querySelector('.news').scrollIntoView({behavior:'smooth',block:'center'});if(s==='Market Overview')document.querySelector('.metrics').scrollIntoView({behavior:'smooth',block:'center'});if(s==='Coins'||s==='Watchlist')document.querySelector('.table-card').scrollIntoView({behavior:'smooth',block:'center'});if(s==='Portfolio Tracker')toast('Portfolio tracker demo: account connection is not enabled.');if(s==='Settings')toast('Settings demo: appearance can be changed with the ☼ button.')}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showSection(b.dataset.section)));
+document.getElementById('search').addEventListener('input',e=>renderCoins(e.target.value));
+document.getElementById('ranges').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{currentRange=b.dataset.range;document.querySelectorAll('#ranges button').forEach(x=>x.classList.toggle('active',x===b));document.getElementById('chart-start').textContent=currentRange==='1D'?'12:00 AM':currentRange==='7D'?'7 days ago':currentRange==='1M'?'1 month ago':currentRange==='3M'?'3 months ago':currentRange==='1Y'?'1 year ago':'All time';document.getElementById('chart-end').textContent=currentRange==='1D'?'11:59 PM':'Today';drawPrice()}));
+document.getElementById('indicators').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{indicator=b.dataset.ind;document.querySelectorAll('#indicators button').forEach(x=>x.classList.toggle('active',x===b));let values={'RSI':['RSI (14)','62.4','Neutral'],'MACD':['MACD','1,284.6','Bullish'],'Moving Averages':['SMA (50)','$64,892','Bullish'],'Bollinger Bands':['Band width','8.2%','Neutral']};let v=values[indicator];document.getElementById('ind-label').textContent=v[0];document.getElementById('ind-value').textContent=v[1];document.getElementById('ind-status').textContent=v[2];document.getElementById('ind-status').className='badge '+(v[2]==='Neutral'?'neutral':'');drawTech()}));
+document.getElementById('theme').addEventListener('click',()=>{document.body.classList.toggle('light');if(document.body.classList.contains('light')){document.body.style.setProperty('--bg','#edf3fc');document.body.style.setProperty('--panel','#fff');document.body.style.setProperty('--text','#10223b');document.body.style.setProperty('--panel2','#fff');document.body.style.setProperty('--line','#d3dfef');document.body.style.background='#edf3fc';toast('Light appearance enabled.')}else{['--bg','--panel','--text','--panel2','--line'].forEach((v,i)=>document.body.style.removeProperty(v));document.body.style.background='';toast('Dark appearance enabled.')}drawPrice();drawTech()});
+function setupCanvas(canvas){let rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=Math.max(1,rect.width*dpr);canvas.height=Math.max(1,rect.height*dpr);let ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);return {ctx,w:rect.width,h:rect.height}}
+function drawPrice(){let c=document.getElementById('price-chart'),{ctx,w,h}=setupCanvas(c);if(!w||!h)return;let styles=getComputedStyle(document.body),line=styles.getPropertyValue('--line').trim()||'#183454',muted=styles.getPropertyValue('--muted').trim()||'#91a9ca';ctx.clearRect(0,0,w,h);let pad={l:48,r:8,t:10,b:24},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;ctx.font='11px system-ui';for(let i=0;i<5;i++){let y=pad.t+ch*i/4;ctx.strokeStyle=line;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();let val=selected.price*(1.035-i*.018);ctx.fillStyle=muted;ctx.fillText(money(val),0,y+4)}for(let i=0;i<7;i++){let x=pad.l+cw*i/6;ctx.strokeStyle=line;ctx.globalAlpha=.45;ctx.beginPath();ctx.moveTo(x,pad.t);ctx.lineTo(x,pad.t+ch);ctx.stroke();ctx.globalAlpha=1}let seed=selected.symbol.split('').reduce((a,b)=>a+b.charCodeAt(0),0)+currentRange.length*21;let vals=[],n=130,base=selected.price;for(let i=0;i<n;i++){seed=(seed*9301+49297)%233280;let noise=(seed/233280-.48)*.013;let trend=(i/n)*.022+Math.sin(i/8)*.006+Math.sin(i/19)*.009;vals.push(base*(.968+trend+noise))}let min=Math.min(...vals)*.997,max=Math.max(...vals)*1.003;let pts=vals.map((v,i)=>({x:pad.l+cw*i/(n-1),y:pad.t+ch-(v-min)/(max-min)*ch}));let grad=ctx.createLinearGradient(0,pad.t,0,pad.t+ch);grad.addColorStop(0,'rgba(0,229,160,.25)');grad.addColorStop(1,'rgba(0,229,160,0)');ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.lineTo(pts[pts.length-1].x,pad.t+ch);ctx.lineTo(pts[0].x,pad.t+ch);ctx.closePath();ctx.fillStyle=grad;ctx.fill();ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.strokeStyle='#00e5a0';ctx.lineWidth=1.8;ctx.stroke();let last=pts.at(-1);ctx.beginPath();ctx.arc(last.x,last.y,3,0,Math.PI*2);ctx.fillStyle='#00e5a0';ctx.fill()}
+function drawTech(){let c=document.getElementById('tech-chart'),{ctx,w,h}=setupCanvas(c);if(!w||!h)return;let line=getComputedStyle(document.body).getPropertyValue('--line').trim()||'#183454';ctx.clearRect(0,0,w,h);for(let i=0;i<4;i++){let y=10+(h-20)*i/3;ctx.strokeStyle=line;ctx.beginPath();ctx.moveTo(4,y);ctx.lineTo(w-4,y);ctx.stroke()}let seed=44;ctx.beginPath();for(let i=0;i<95;i++){seed=(seed*9301+49297)%233280;let noise=seed/233280;let trend=i/95*.42+Math.sin(i/7)*.09;let v=indicator==='RSI'?.25+noise*.37+trend*.3:indicator==='MACD'?.2+noise*.42+trend*.45:indicator==='Moving Averages'?.25+i/95*.45+Math.sin(i/9)*.04:.3+noise*.32+trend*.35;let x=4+(w-8)*i/94,y= h-8-Math.min(.92,Math.max(.08,v))*(h-16);i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.strokeStyle='#9167ff';ctx.lineWidth=1.6;ctx.stroke();ctx.lineTo(w-4,h-4);ctx.lineTo(4,h-4);ctx.closePath();let g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(145,103,255,.25)');g.addColorStop(1,'rgba(145,103,255,0)');ctx.fillStyle=g;ctx.fill()}
+function updateClock(){document.getElementById('clock').textContent=new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}
+renderCoins();drawPrice();drawTech();updateClock();setInterval(updateClock,30000);window.addEventListener('resize',()=>{drawPrice();drawTech()});
+</script>
+
+<script>
+/* Live CoinGecko integration: public API, no API key required for this prototype. */
+(function(){
+ const ids=['bitcoin','ethereum','tether','binancecoin','solana','ripple','dogecoin'];
+ const symbols={bitcoin:'BTC',ethereum:'ETH',tether:'USDT',binancecoin:'BNB',solana:'SOL',ripple:'XRP',dogecoin:'DOGE'};
+ const status=document.getElementById('data-status');
+ let historical=null, selectedId='bitcoin', period='1D';
+ const compact=n=>new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(n||0);
+ const usd=n=>n<1?'$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:6}):'$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+ const priorSelect=window.selectCoin;
+ async function markets(){
+  try{
+   const response=await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+ids.join(',')+'&order=market_cap_desc&per_page=7&page=1&sparkline=false&price_change_percentage=24h');
+   if(!response.ok)throw Error('HTTP '+response.status);
+   const data=await response.json();
+   data.forEach(d=>{
+    const c=coins.find(x=>x.id===d.id); if(!c)return;
+    c.price=d.current_price;c.change=d.price_change_percentage_24h||0;c.cap='$'+compact(d.market_cap);
+   });
+   const gResponse=await fetch('https://api.coingecko.com/api/v3/global');
+   if(gResponse.ok){const g=(await gResponse.json()).data;
+    document.getElementById('market-cap').textContent='$'+compact(g.total_market_cap.usd);
+    document.getElementById('market-volume').textContent='$'+compact(g.total_volume.usd);
+    document.getElementById('btc-dominance').textContent=(g.market_cap_percentage.btc||0).toFixed(1)+'%';
+    document.getElementById('active-coins').textContent=Number(g.active_cryptocurrencies||0).toLocaleString();
+    const pct=g.market_cap_change_percentage_24h_usd||0,el=document.getElementById('market-cap-change');
+    el.textContent=(pct>=0?'▲ ':'▼ ')+Math.abs(pct).toFixed(2)+'% (24h)';el.className=(pct>=0?'positive':'negative')+' small';
+   }
+   status.textContent='LIVE MARKET DATA';document.getElementById('data-note').textContent='Prices and charts sourced from CoinGecko public API. Data may be delayed. For information only — not financial advice.';
+   renderCoins(document.getElementById('search').value);
+   const c=coins.find(x=>x.id===selectedId)||coins[0];
+   document.getElementById('main-icon').textContent=c.icon;document.getElementById('main-icon').style.background=c.color;
+   document.getElementById('main-name').innerHTML=c.name+' <span style="font-weight:400;color:var(--muted)">('+c.symbol+')</span>';
+   document.getElementById('main-ticker').textContent=c.symbol+' / USD';
+   document.getElementById('main-price').textContent=usd(c.price);
+   document.getElementById('main-change').textContent=(c.change>=0?'▲ ':'▼ ')+Math.abs(c.change).toFixed(2)+'% (24h)';
+   document.getElementById('main-change').className=(c.change>=0?'positive':'negative')+' small';
+   await chart();
+  }catch(e){status.textContent='MARKET DATA UNAVAILABLE';document.getElementById('data-note').textContent='Live data could not be loaded. The API may be rate-limited or your connection may block it; try refreshing later. Any remaining charts are illustrative. Not financial advice.';console.warn(e)}
+ }
+ async function chart(){
+  const days={'1D':1,'7D':7,'1M':30,'3M':90,'1Y':365,'ALL':'max'}[period]||1;
+  try{
+   const r=await fetch('https://api.coingecko.com/api/v3/coins/'+selectedId+'/market_chart?vs_currency=usd&days='+days+'&interval='+(days===1?'hourly':'daily'));
+   if(!r.ok)throw Error('Chart HTTP '+r.status);
+   const d=await r.json();historical=(d.prices||[]).map(x=>x[1]).filter(Number.isFinite);drawLiveChart();
+  }catch(e){historical=null;drawPrice();console.warn(e)}
+ }
+ function drawLiveChart(){
+  if(!historical||historical.length<2)return drawPrice();
+  const canvas=document.getElementById('price-chart'),rect=canvas.getBoundingClientRect(),dpr=devicePixelRatio||1;
+  canvas.width=Math.max(1,rect.width*dpr);canvas.height=Math.max(1,rect.height*dpr);
+  const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);const w=rect.width,h=rect.height;
+  const style=getComputedStyle(document.body),grid=style.getPropertyValue('--line').trim()||'#183454',muted=style.getPropertyValue('--muted').trim()||'#91a9ca';
+  ctx.clearRect(0,0,w,h);const pad={l:54,r:8,t:10,b:20},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;
+  const vals=historical.slice(-180),min=Math.min(...vals)*.998,max=Math.max(...vals)*1.002;
+  ctx.font='11px system-ui';for(let i=0;i<5;i++){let y=pad.t+ch*i/4;ctx.strokeStyle=grid;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();ctx.fillStyle=muted;ctx.fillText(usd(max-(max-min)*i/4),0,y+4)}
+  const pts=vals.map((v,i)=>({x:pad.l+cw*i/(vals.length-1),y:pad.t+ch-(v-min)/(max-min||1)*ch}));
+  let grad=ctx.createLinearGradient(0,pad.t,0,pad.t+ch);grad.addColorStop(0,'rgba(0,229,160,.25)');grad.addColorStop(1,'rgba(0,229,160,0)');
+  ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.lineTo(pts.at(-1).x,pad.t+ch);ctx.lineTo(pts[0].x,pad.t+ch);ctx.closePath();ctx.fillStyle=grad;ctx.fill();
+  ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.strokeStyle='#00e5a0';ctx.lineWidth=1.8;ctx.stroke();
+ }
+ document.getElementById('ranges').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{period=b.dataset.range;setTimeout(chart,50)}));
+ const oldSelect=window.selectCoin;
+ window.selectCoin=function(c){selectedId=c.id||ids[0];oldSelect(c);chart()};
+ // Make each coin row switch to its corresponding live historical chart.
+ document.getElementById('coin-rows').addEventListener('click',e=>{const row=e.target.closest('tr[data-symbol]');if(!row)return;selectedId=ids.find(id=>symbols[id]===row.dataset.symbol)||'bitcoin';setTimeout(chart,50)});
+ window.addEventListener('resize',()=>{if(historical)drawLiveChart()});
+ markets();setInterval(markets,60000);
+})();
+</script>
+
+</body>
+</html>
